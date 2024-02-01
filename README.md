@@ -138,7 +138,7 @@ Email: imzachjohnson@gmail.com, phoenix.scooter@gmail.com
 
 ### Acknowledgements
 
-- [timefhuman](https://github.com/alvinwan/timefhuman)
+
 - [word2number](https://github.com/akshaynagpal/w2n)
 
 ## License

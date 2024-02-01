@@ -1,5 +1,5 @@
 from word2number import w2n
-from timefhuman import timefhuman
+
 from datetime import datetime
 from clickupython import exceptions
 import pendulum as time
@@ -32,7 +32,7 @@ def fuzzy_time_to_unix(text: str):
     """
     try:
         now = time.now()
-        timestamp = datetime.timestamp(timefhuman(text, now))
+        timestamp = datetime.timestamp((text, now))
         return str(int(timestamp * 1000))
     except BaseException:
         print("\n")

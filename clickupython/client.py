@@ -590,6 +590,7 @@ class ClickUpClient:
         date_created_lt: str = None,
         date_updated_gt: str = None,
         date_updated_lt: str = None,
+        custom_fields: str = None,
     ) -> models.Tasks:
 
         """The maximum number of tasks returned in this response is 100. When you are paging this request, you should check list limit
@@ -667,6 +668,8 @@ class ClickUpClient:
             supplied_values.append(f"date_updated_lt={date_updated_lt}")
         if subtasks:
             supplied_values.append(f"subtasks=true")
+        if custom_fields:
+            supplied_values.append(f"custom_fields={custom_fields}")
 
         joined_url = f"task?{'&'.join(supplied_values)}"
 
